@@ -30,6 +30,7 @@
 		led1 = &led1;
 		led2 = &led2;
 		sw0 = &button0;
+		chgstat0 = &button1;
 		watchdog0 = &wdt0;
 		accel0 = &lis2dh12;
 	};
@@ -60,6 +61,10 @@
 			/* gpio flags need validation */
 			gpios = <&gpio0 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
 			label = "Button";
+		};
+		button1: button_1 {
+			gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
+			label = "BAT_CHG_STAT";
 		};
 	};
 
