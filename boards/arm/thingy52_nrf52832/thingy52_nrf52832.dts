@@ -30,7 +30,8 @@
 		led1 = &led1;
 		led2 = &led2;
 		sw0 = &button0;
-		chgstat0 = &button1;
+		usbdetect0 = &button1;
+		chgstat0 = &button2;
 		watchdog0 = &wdt0;
 		accel0 = &lis2dh12;
 	};
@@ -63,6 +64,10 @@
 			label = "Button";
 		};
 		button1: button_1 {
+			gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+			label = "USB_DETECT";
+		};
+		button2: button_2 {
 			gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
 			label = "BAT_CHG_STAT";
 		};
